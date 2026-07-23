@@ -21,8 +21,8 @@ public class PlayerBehavior : MonoBehaviour
     {
         Debug.Log("Move input is: " + moveInput.ReadValue<Vector2>());
 
-        float horizontalInput = moveInput.ReadValue<Vector2>().x;
-        float verticalInput = moveInput.ReadValue<Vector2>().y;
+        float horizontalInput = moveInput.ReadValue<Vector2>().x; // -1 , 0 or 1 value for horizontal movement
+        float verticalInput = moveInput.ReadValue<Vector2>().y; // -1 , 0 or 1 value for vertical movement
 
         transform.position = new Vector3(transform.position.x + horizontalInput * speed * Time.deltaTime, 
                                         transform.position.y + verticalInput * speed * Time.deltaTime, 
